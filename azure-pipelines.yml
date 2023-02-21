@@ -45,6 +45,10 @@ steps:
     appscan api_login -u $(asocKey) -P $(asocSecret) -persist
   displayName: 'Step 2 - Login'
 
-- powershell: |
+- powershell: | 
+    echo "Using: "
+    echo $(appId) 
+    echo $(asocKey) 
+    echo $(asocSecret)
     appscan queue_analysis -a $(appId) -n AzurePipelineScanOnDotNet
   displayName: 'Step 3 - Upload and queue scan'
