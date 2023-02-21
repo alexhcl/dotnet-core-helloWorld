@@ -39,3 +39,12 @@ steps:
 - powershell: |
     appscan prepare
   displayName: 'Step 1 - Building artifact'
+  
+
+- powershell: |
+    appscan api_login -u $(asocKey) -P $(asocSecret) -persist
+  displayName: 'Step 2 - Login'
+
+- powershell: |
+    appscan queue_analysis -a $(appId) -n AzurePipelineScanOnDotNet
+  displayName: 'Step 3 - Upload and queue scan'
