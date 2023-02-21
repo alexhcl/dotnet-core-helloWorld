@@ -13,9 +13,9 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  asocKey: '0a0ab60f-6ff2-ed42-744a-3dd6e0caeeac'
-  asocSecret: 'jXUlFtlslyIrulHFbIWWZCqtRbShbGOefw21yr7woXhY'
-  appId: '4a5de5c1-0cb4-4a2d-9949-27a35ee7b0ec'
+  asocKey: '6c4d68db-ce1c-bbd7-9fea-da9c1ce4b5d0'
+  asocSecret: 'bVu/ciKpTzUTDTG1mys1y1JNES3GfA1BsDSvzwt2Xe4='
+  appId: '57bd6a13-a5f7-49e2-8617-b14e20877078'
 
 steps:
 - task: NuGetToolInstaller@1
