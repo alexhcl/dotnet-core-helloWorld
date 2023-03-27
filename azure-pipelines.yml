@@ -1,16 +1,5 @@
 # ASP.NET Core (.NET Framework)
-- task: HCL AppScan Enterprise@2
-  inputs:
-    ServiceEndPointAse: 'Alex HCL'
-    jobName: 'Alex HCL ASE'
-    folderId: 1
-    templateId: 73
-    testPolicyId: 10
-    applicationId: 1
-    loginMethod: 'None'
-# Build and test ASP.NET Core projects targeting the full .NET Framework.
-# Add steps that publish symbols, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
 
 trigger:
 - master
@@ -34,6 +23,19 @@ variables:
   #appId: '4a5de5c1-0cb4-4a2d-9949-27a35ee7b0ec'
 steps:
 - task: NuGetToolInstaller@1
+
+- task: HCL AppScan Enterprise@2
+  inputs:
+    ServiceEndPointAse: 'Alex HCL'
+    jobName: 'Alex HCL ASE'
+    folderId: 1
+    templateId: 73
+    testPolicyId: 10
+    applicationId: 1
+    loginMethod: 'None'
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 - task: NuGetCommand@2
   inputs:
