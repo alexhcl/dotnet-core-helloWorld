@@ -30,7 +30,7 @@ steps:
 
 - task: HCL AppScan Enterprise@2
   inputs:
-    ServiceEndPointAse: 'SrvCon3'
+    ServiceEndPointAse: 'SrvCon4'
     jobName: 'Alex HCL ASE 3'
     folderId: 1
     templateId: 73
