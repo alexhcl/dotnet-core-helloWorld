@@ -32,7 +32,7 @@ steps:
   inputs:
     ServiceEndPointAse: 'SrvCon4'
     jobName: 'Alex HCL ASE 3'
-    folderId: 1
+    folderId: 4
     templateId: 73
     testPolicyId: 10
     applicationId: 1
