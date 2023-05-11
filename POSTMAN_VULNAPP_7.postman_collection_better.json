@@ -46,7 +46,7 @@
 			"response": []
 		},
 		{
-			"name": "XSS_01",
+			"name": "XSS_02",
 			"request": {
 				"method": "GET",
 				"header": [],
