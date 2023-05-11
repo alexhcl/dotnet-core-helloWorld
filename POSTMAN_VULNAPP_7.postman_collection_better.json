@@ -59,8 +59,8 @@
 					],
 					"port": "8080",
 					"path": [
-						"lab03",
-						"xss_03.php"
+						"lab02",
+						"xss_02.php"
 					],
 					"query": [
 						{
