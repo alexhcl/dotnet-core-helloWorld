@@ -20,7 +20,6 @@
 					],
 					"port": "8080",
 					"path": [
-						"lab03",
 						"xss_01.php"
 					],
 					"query": [
