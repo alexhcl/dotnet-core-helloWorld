@@ -15,8 +15,8 @@
 					"raw": "http://localhost.com:8080/lab03/xss_01.php?name=asd&hobby=asd&rate=1&form=submit",
 					"protocol": "http",
 					"host": [
-						"vulnapp",
-						"local"
+						"localhost",
+						"com"
 					],
 					"port": "2280",
 					"path": [
@@ -54,8 +54,8 @@
 					"raw": "http://localhost.com:8080/admin/admin_file.txt",
 					"protocol": "http",
 					"host": [
-						"vulnapp",
-						"local"
+						"localhost",
+						"com"
 					],
 					"port": "2280",
 					"path": [
