@@ -12,7 +12,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost.com:8080/xss_01.php?name=asd&hobby=asd&rate=1&form=submit",
+					"raw": "http://localhost.com:8080/aaa/xss_01.php?name=asd&hobby=asd&rate=1&form=submit",
 					"protocol": "http",
 					"host": [
 						"localhost",
