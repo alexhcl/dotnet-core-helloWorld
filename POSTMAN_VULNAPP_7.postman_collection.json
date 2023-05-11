@@ -18,7 +18,7 @@
 						"localhost",
 						"com"
 					],
-					"port": "2280",
+					"port": "8080",
 					"path": [
 						"lab03",
 						"xss_01.php"
@@ -57,7 +57,7 @@
 						"localhost",
 						"com"
 					],
-					"port": "2280",
+					"port": "8080",
 					"path": [
 						"admin",
 						"admin_file.txt"
