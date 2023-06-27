@@ -16,7 +16,7 @@
 					"protocol": "http",
 					"host": [
 						"localhost",
-						"local"
+						"com"
 					],
 					"port": "8080",
 					"path": [
@@ -55,7 +55,7 @@
 					"protocol": "http",
 					"host": [
 						"localhost",
-						"local"
+						"com"
 					],
 					"port": "8080",
 					"path": [
