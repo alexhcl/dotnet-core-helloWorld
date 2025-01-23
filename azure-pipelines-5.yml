@@ -1,0 +1,41 @@
+trigger:
+- master
+
+steps:
+- script: SAST - HCL AppScan Source Scan
+  displayName: 'Run a AppScan Source Scan'
+
+- script: |
+variables:
+  aseApiKeyId: xxxxxxxxxxxxxxxx
+  aseApiKeySecret: xxxxxxxxxxxxxxxx
+  compiledArtifactFolder: none
+  scanConfig: Normal scan
+  aseAppName: $(Build.Repository.Name)
+  aseHostname: xxxxxxxxxxxxxxxx
+  aseToken: C:\ProgramData\HCL\AppScanSource\config\ounceautod.token
+  sevSecGw: highIssues
+  maxIssuesAllowed: 100
+  WorkingDirectory: $(System.DefaultWorkingDirectory)
+  BuildNumber: $(Build.BuildNumber)
+
+trigger: none
+
+pool: default
+
+steps:
+- pwsh: |
+    Invoke-WebRequest -Uri appscansrc_create_config_scan_folder.ps1 -OutFile appscansrc_create_config_scan_folder.ps1
+    .\appscansrc_create_config_scan_folder.ps1
+  displayName: 'Creating AppScan Source Config file'
+- pwsh: |
+    Invoke-WebRequest -Uri appscansrc_scan.ps1 -OutFile appscansrc_scan.ps1
+    .\appscansrc_scan.ps1
+  displayName: 'Running SAST scan'
+- pwsh: |
+    Invoke-WebRequest -Uri appscansrc_after_scan_steps.ps1
+  displayName: 'Performing after scan steps'
+- publish: $(aseAppName)-$(BuildNumber).pdf
+  artifact: $(aseAppName)-$(BuildNumber).pdf
+  continueOnError: On
+  displayName: 'Sending PDF email / uploading to SFTP / insert in DB'
